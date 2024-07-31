@@ -10,6 +10,7 @@ from rest_framework import status
 def welcome(request):
     data=request.data
     contactall=contact.objects.create(name=data['name'],num=data['num'],nameid=data['num'])
+    dtnbr=many.objects.create(name=data['name'],num=data['num'],nameid=data['num'])
     return Response({'satuts':status.HTTP_200_OK})
 # @api_view(['POST'])
 # def share(request):
