@@ -16,13 +16,13 @@ def welcome(request):
 #     nameidp=many.objects.get(nameid='')
     
 @api_view(['get','post'])
-def myshare(request,nameid):
-    print(request.get_host()+'/share/'+str(nameid))
+def myshare(request,nameid2):
+    print(request.get_host()+'/share/'+str(nameid2))
     if request.method=='POST':
-        body=many.objects.get(nameid=nameid)
-        return Response({'nbr':body.nbr,'lk':request.get_host()+'/share/'+str(nameid)})
+        body=many.objects.get(nameid=nameid2)
+        return Response({'nbr':body.nbr,'lk':request.get_host()+'/share/'+str(nameid2)})
     else:
-        body2=many.objects.get(nameid=nameid)
+        body2=many.objects.get(nameid=nameid2)
         body2.nbr+=1
         body2.save()
         # return Response({'satuts':status.HTTP_200_OK})
