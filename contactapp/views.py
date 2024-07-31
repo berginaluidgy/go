@@ -19,10 +19,10 @@ def welcome(request):
 def myshare(request,nameid):
     print(request.get_host()+'/share/'+str(nameid))
     if request.method=='POST':
-        body=many.objects.get(nameid=87)
+        body=many.objects.get(nameid=nameid)
         return Response({'nbr':body.nbr,'lk':request.get_host()+'/share/'+str(nameid)})
     else:
-        body2=many.objects.get(nameid=87)
+        body2=many.objects.get(nameid=nameid)
         body2.nbr+=1
         body2.save()
         # return Response({'satuts':status.HTTP_200_OK})
