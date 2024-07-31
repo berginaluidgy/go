@@ -26,5 +26,5 @@ def myshare(request,nameid):
         body2.nbr+=1
         body2.save()
         # return Response({'satuts':status.HTTP_200_OK})
-        return redirect('http://localhost:5173/')
+        return redirect('yonselkoutklee.vercel.app/')
         # return Response({'satuts':status.HTTP_200_OK})
