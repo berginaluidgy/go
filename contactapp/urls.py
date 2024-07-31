@@ -4,5 +4,5 @@ from .views import welcome,myshare
 
 urlpatterns = [
    path('welcome',welcome),
-    path('share/<int:nameid>',myshare)
+    path('share/<int:nameid2>',myshare)
 ]
